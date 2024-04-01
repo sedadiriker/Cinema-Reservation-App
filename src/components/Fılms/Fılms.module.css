@@ -1,0 +1,19 @@
+.carousel{
+    width: 80%;
+    margin: auto;
+    .carousel-item{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        & img{
+            width: 35%;
+            height: 500px;
+        }
+    }
+    
+    
+}
+
+.custom-next-icon{
+    border: 1px solid red !important;
+}
