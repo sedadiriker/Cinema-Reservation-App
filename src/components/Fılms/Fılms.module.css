@@ -6,8 +6,8 @@
         display: flex;
         justify-content: center;
         & img{
-            width: 35%;
-            height: 500px;
+            width: 45%;
+            height: 550px;
         }
     }
     
