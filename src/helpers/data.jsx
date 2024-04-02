@@ -909,53 +909,59 @@ export const moviesSchedule = [
 
 export const cinemaSeats = [
   // A Row
-  { id: "A1", row: "A", number: 1, isAvailable: true },
-  { id: "A2", row: "A", number: 2, isAvailable: true },
-  { id: "A3", row: "A", number: 3, isAvailable: false },
-  { id: "A4", row: "A", number: 4, isAvailable: true },
-  { id: "A5", row: "A", number: 5, isAvailable: true },
-  { id: "A6", row: "A", number: 6, isAvailable: false },
-  { id: "A7", row: "A", number: 7, isAvailable: false },
-  { id: "A8", row: "A", number: 8, isAvailable: true },
-
+  [
+    { id: "A1", row: "A", number: 1, isAvailable: true },
+    { id: "A2", row: "A", number: 2, isAvailable: true },
+    { id: "A3", row: "A", number: 3, isAvailable: false },
+    { id: "A4", row: "A", number: 4, isAvailable: true },
+    { id: "A5", row: "A", number: 5, isAvailable: true },
+    { id: "A6", row: "A", number: 6, isAvailable: false },
+    { id: "A7", row: "A", number: 7, isAvailable: false },
+    { id: "A8", row: "A", number: 8, isAvailable: true },
+  ],
   // B Row
-  { id: "B1", row: "B", number: 1, isAvailable: false },
-  { id: "B2", row: "B", number: 2, isAvailable: true },
-  { id: "B3", row: "B", number: 3, isAvailable: true },
-  { id: "B4", row: "B", number: 4, isAvailable: false },
-  { id: "B5", row: "B", number: 5, isAvailable: true },
-  { id: "B6", row: "B", number: 6, isAvailable: true },
-  { id: "B7", row: "B", number: 7, isAvailable: false },
-  { id: "B8", row: "B", number: 8, isAvailable: true },
-
+  [
+    { id: "B1", row: "B", number: 1, isAvailable: false },
+    { id: "B2", row: "B", number: 2, isAvailable: true },
+    { id: "B3", row: "B", number: 3, isAvailable: true },
+    { id: "B4", row: "B", number: 4, isAvailable: false },
+    { id: "B5", row: "B", number: 5, isAvailable: true },
+    { id: "B6", row: "B", number: 6, isAvailable: true },
+    { id: "B7", row: "B", number: 7, isAvailable: false },
+    { id: "B8", row: "B", number: 8, isAvailable: true },
+  ],
   // C Row
-  { id: 'C1', row: 'C', number: 1, isAvailable: true },
-{ id: 'C2', row: 'C', number: 2, isAvailable: true },
-{ id: 'C3', row: 'C', number: 3, isAvailable: false },
-{ id: 'C4', row: 'C', number: 4, isAvailable: true },
-{ id: 'C5', row: 'C', number: 5, isAvailable: true },
-{ id: 'C6', row: 'C', number: 6, isAvailable: false },
-{ id: 'C7', row: 'C', number: 7, isAvailable: true },
-{ id: 'C8', row: 'C', number: 8, isAvailable: true },
-
-//D Row
-{ id: 'D1', row: 'D', number: 1, isAvailable: true },
-{ id: 'D2', row: 'D', number: 2, isAvailable: true },
-{ id: 'D3', row: 'D', number: 3, isAvailable: false },
-{ id: 'D4', row: 'D', number: 4, isAvailable: false },
-{ id: 'D5', row: 'D', number: 5, isAvailable: false },
-{ id: 'D6', row: 'D', number: 6, isAvailable: false },
-{ id: 'D7', row: 'D', number: 7, isAvailable: true },
-{ id: 'D8', row: 'D', number: 8, isAvailable: true },
-
-// E Row
-{ id: 'E1', row: 'E', number: 1, isAvailable: false },
-{ id: 'E2', row: 'E', number: 2, isAvailable: false },
-{ id: 'E3', row: 'E', number: 3, isAvailable: true },
-{ id: 'E4', row: 'E', number: 4, isAvailable: true },
-{ id: 'E5', row: 'E', number: 5, isAvailable: true },
-{ id: 'E6', row: 'E', number: 6, isAvailable: true },
-{ id: 'E7', row: 'E', number: 7, isAvailable: true },
-{ id: 'E8', row: 'E', number: 8, isAvailable: true },
-
+  [
+    { id: 'C1', row: 'C', number: 1, isAvailable: true },
+    { id: 'C2', row: 'C', number: 2, isAvailable: true },
+    { id: 'C3', row: 'C', number: 3, isAvailable: false },
+    { id: 'C4', row: 'C', number: 4, isAvailable: true },
+    { id: 'C5', row: 'C', number: 5, isAvailable: true },
+    { id: 'C6', row: 'C', number: 6, isAvailable: false },
+    { id: 'C7', row: 'C', number: 7, isAvailable: true },
+    { id: 'C8', row: 'C', number: 8, isAvailable: true },
+  ],
+  // D Row
+  [
+    { id: 'D1', row: 'D', number: 1, isAvailable: true },
+    { id: 'D2', row: 'D', number: 2, isAvailable: true },
+    { id: 'D3', row: 'D', number: 3, isAvailable: false },
+    { id: 'D4', row: 'D', number: 4, isAvailable: false },
+    { id: 'D5', row: 'D', number: 5, isAvailable: false },
+    { id: 'D6', row: 'D', number: 6, isAvailable: false },
+    { id: 'D7', row: 'D', number: 7, isAvailable: true },
+    { id: 'D8', row: 'D', number: 8, isAvailable: true },
+  ],
+  // E Row
+  [
+    { id: 'E1', row: 'E', number: 1, isAvailable: false },
+    { id: 'E2', row: 'E', number: 2, isAvailable: false },
+    { id: 'E3', row: 'E', number: 3, isAvailable: true },
+    { id: 'E4', row: 'E', number: 4, isAvailable: true },
+    { id: 'E5', row: 'E', number: 5, isAvailable: true },
+    { id: 'E6', row: 'E', number: 6, isAvailable: true },
+    { id: 'E7', row: 'E', number: 7, isAvailable: true },
+    { id: 'E8', row: 'E', number: 8, isAvailable: true },
+  ]
 ];
+

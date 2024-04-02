@@ -2,22 +2,26 @@ import SessionStyle from "./Session.module.css";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 
-const Session = ({ selectedFilm,onTimeSelected }) => {
-  
-  // console.log(selectedTimeIndex);
+const Session = ({ selectedFilm,handleTicketPage }) => {
+  const [selectedDateText, setSelectedDateText] = useState(""); // Yeni state
 
   const [selectedDay, setSelectedDay] = useState(
     new Date().toLocaleString("en-US", { weekday: "long" })
-  );
+  )
   //   console.log(new Date().toLocaleString('en-US', { weekday: 'long' }))
+
+  const handleChange = (e) => {
+    const selectedOptionText = e.target.options[e.target.selectedIndex].text; // Kullanıcıya gösterilen tarih metnini al
+    setSelectedDay(e.target.value)
+    setSelectedDateText(selectedOptionText); // Tarih metnini ayarla
+  }
 
   //* hangi scdule ise onun zamanları
   const selectedScheduleTimes =
     selectedFilm.schedule?.find((schedule) => schedule.day === selectedDay)
       ?.times || [];
-  // console.log(selectedScheduleTimes)
   const handleTimeSelect = (index) => {
-    onTimeSelected() // Ticket sayfasına geçiş
+    handleTicketPage(selectedScheduleTimes[index],selectedDateText) // Ticket sayfasına geçiş
   }
   return (
     <>
@@ -28,7 +32,7 @@ const Session = ({ selectedFilm,onTimeSelected }) => {
           size="lg"
           className={`${SessionStyle.select} `}
           aria-label="Default select example"
-          onChange={(e) => setSelectedDay(e.target.value)}
+          onChange={handleChange}
         >
           {selectedFilm.schedule?.map((daySchedule, index) => (
             <option key={index} value={daySchedule.day}>

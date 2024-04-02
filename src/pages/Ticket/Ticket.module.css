@@ -1,15 +1,46 @@
-.ticket{
-    padding: 1rem;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.ticket {
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-    & .header{
-        & .home{
-            position: absolute;
-            top: 40%;
-            right:50px ;
-        }
+  & .header {
+    & .home {
+      position: absolute;
+      top: 40%;
+      right: 50px;
     }
+  }
+  .main {
+    padding: 1rem 3rem;
+  }
+  .information {
+    border: 2px solid rgba(255, 255, 255, 0.137);
+    border-radius: 20px;
+  }
+  .seat {
+    background-color: #6F6F89;
+    padding: 12px;
+    margin: 5px;
+    font-size: 10px;
+    width: 35px;
+    box-sizing: border-box;
+     &:hover{
+        cursor: pointer;
+        transform: scale(1.10);
+     }
+  }
+  .seat-information{
+    border: 1px solid rgba(255, 255, 255, 0.615);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1rem;
+    position: fixed;
+    bottom: 20px;
+    left: 37%;
+  }
+  .empty span:first-child{
+    background-color: #6F6F89 !important;
+  }
 }

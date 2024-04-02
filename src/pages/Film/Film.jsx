@@ -4,7 +4,7 @@ import FilmStyle from "./Film.module.css"
 import Session from "../../components/Session/Session"
 
 const Film = ({handlePage,selectedFilm,handleTicketPage}) => {
-    console.log(selectedFilm.title)
+    // console.log(selectedFilm.title)
     
 //* Ticket tıklandığında sessiona ilerleme
     const handleTicketClick = () => {
@@ -59,7 +59,7 @@ const Film = ({handlePage,selectedFilm,handleTicketPage}) => {
             </Col>
         </Row>
         <div id="session">
-<Session selectedFilm={selectedFilm} onTimeSelected={handleTicketPage} />
+<Session selectedFilm={selectedFilm} handleTicketPage={handleTicketPage} />
         </div>
     </div>
   )
