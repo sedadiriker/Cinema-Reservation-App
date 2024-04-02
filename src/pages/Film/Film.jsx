@@ -1,9 +1,25 @@
 import { Col, Row } from "react-bootstrap"
 import Header from "../../components/Header/Header"
 import FilmStyle from "./Film.module.css"
+import Session from "../../components/Session/Session"
 
-const Film = ({handlePage,selectedFilm}) => {
+const Film = ({handlePage,selectedFilm,handleTicketPage}) => {
+    console.log(selectedFilm.title)
+    
+//* Ticket tıklandığında sessiona ilerleme
+    const handleTicketClick = () => {
+        const sessionElement = document.getElementById("session");
+        if (sessionElement) {
+          window.scrollTo({
+            top: sessionElement.offsetTop,
+            behavior: "smooth"
+          })
+        }
+        
+      }
+
   return (
+    
     <div className={FilmStyle.film}>
         <div className={`${FilmStyle.header} position-relative`}>
         <Header/>
@@ -13,10 +29,11 @@ const Film = ({handlePage,selectedFilm}) => {
         <Col className={`${FilmStyle["selectedFilm-image"]}`}>
                 <img src={selectedFilm.image} alt={selectedFilm.title} />
             </Col>
-            <Col className={` FilmStyle["selectedFilm-text"] h-100 text-white`}>
-                <div className="d-flex justify-content-between mb-4">
+            <Col className={`${FilmStyle["selectedFilm-text"]} h-100 text-white`}>
+
+                <div className="d-flex justify-content-between mb-4 align-items-center">
                     <h2 className="text-warning">{selectedFilm.title}</h2>
-                    <button className={`btn bg-warning`}>Ticket</button>
+                    <button onClick={handleTicketClick} className={`btn bg-warning h-50`}>Ticket</button>
                 </div>
                 <div className="story my-3">
                     {selectedFilm.story}
@@ -41,7 +58,9 @@ const Film = ({handlePage,selectedFilm}) => {
                 </div>
             </Col>
         </Row>
-
+        <div id="session">
+<Session selectedFilm={selectedFilm} onTimeSelected={handleTicketPage} />
+        </div>
     </div>
   )
 }

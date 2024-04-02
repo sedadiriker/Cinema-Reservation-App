@@ -1,11 +1,10 @@
 import Fılms from "../../components/Fılms/Fılms"
 import Header from "../../components/Header/Header"
-import moviesSchedule from "../../helpers/data"
+import {moviesSchedule} from "../../helpers/data"
 import HomeStyle from "./Home.module.css"
 
 const Home = ({handlePage}) => {
 
- 
   return (
     <div className={HomeStyle.home}>
           <Header/>

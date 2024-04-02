@@ -1,0 +1,27 @@
+
+.select{
+    text-align: center;
+    background-color: #3C3D4C;
+    color: white;
+    border-radius: 20px;
+    width: 25%;
+    margin: auto;
+    border: none;
+    position: relative;
+}
+
+.time{
+    color: white;
+    border: 1px solid;
+    width: 180px;
+    transition: all 1s;
+    &:hover{
+        background-color:#FFC007 ;
+        color: black;
+    }
+}
+.format{
+    font-size: 12px;
+    white-space: wrap;
+}
+
