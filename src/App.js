@@ -4,15 +4,17 @@ import { useState } from "react";
 
 function App() {
   const [currentPage,setCurrentPage] = useState("home")
+  const [selectFilm, setSelectFilm] = useState(null)
 
-  const handlePage = () => {
+  const handlePage = (film) => {
     setCurrentPage(currentPage => currentPage === 'home' ? 'film' : 'home' )
+    setSelectFilm(film)
   }
   return (
     <div className="App">
 
       {currentPage === 'home' && <Home handlePage={handlePage} />}
-      {currentPage === 'film' && <Film handlePage={handlePage} />}  
+      {currentPage === 'film' && <Film selectedFilm = {selectFilm} handlePage={handlePage} />}  
     </div>
   );
 }

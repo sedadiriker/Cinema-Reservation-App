@@ -6,7 +6,8 @@
         display: flex;
         justify-content: center;
         & img{
-            width: 45%;
+            width: 100%;
+            object-fit: contain;
             height: 550px;
         }
     }

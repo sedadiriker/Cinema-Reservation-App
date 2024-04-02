@@ -8,7 +8,7 @@ const Fılms = ({ films,handlePage }) => {
       <Carousel fade className={FılmsStyle.carousel}>
         {films.map((film) => (
           <CarouselItem className={FılmsStyle["carousel-item"]} key={film.id}>
-            <img onClick={handlePage} role="button" src={film.image} alt={film.title} />
+            <img onClick={() => handlePage(film)} role="button" src={film.image} alt={film.title} />
           </CarouselItem>
         ))}
       </Carousel>
