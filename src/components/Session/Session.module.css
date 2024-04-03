@@ -4,9 +4,9 @@
     background-color: #3C3D4C;
     color: white;
     border-radius: 20px;
-    width: 25%;
+    border: 1px solid rgba(255, 255, 255, 0.409);
+    width: 275px;
     margin: auto;
-    border: none;
     position: relative;
 }
 

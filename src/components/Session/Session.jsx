@@ -1,6 +1,7 @@
 import SessionStyle from "./Session.module.css";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
+import { Col, Row } from "react-bootstrap";
 
 const Session = ({ selectedFilm,handleTicketPage }) => {
   const [selectedDateText, setSelectedDateText] = useState(""); // Yeni state
@@ -46,19 +47,19 @@ const Session = ({ selectedFilm,handleTicketPage }) => {
           ))}
         </Form.Select>
 
-        <div className="my-5 d-flex justify-content-center">
+        <Row xs={2} md={6} className="my-5 justify-content-center row-gap-4">
           {selectedScheduleTimes.map((time, index) => (
-            <div
+            <Col
             role="button"
-            className={`${SessionStyle.time} border border-2 border-warning p-3 rounded-3 mx-3 d-flex gap-1 justify-content-center align-items-center`}
+            className={`${SessionStyle.time} border border-2 border-warning p-2 rounded-3 mx-3 d-flex gap-1 justify-content-center align-items-center`}
             key={index}
             onClick={() => handleTimeSelect(index)} 
           >
             <p className="fw-bold fs-4">{time.time} </p>
             <p className={SessionStyle.format}>{time.format}</p>
-          </div>
+          </Col>
           ))}
-        </div>
+        </Row>
       </div>
     </>
   );
