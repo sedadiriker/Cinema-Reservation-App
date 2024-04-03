@@ -27,7 +27,7 @@ const Film = ({handlePage,selectedFilm,handleTicketPage}) => {
         </div>
         <Row xs={1} md={2} className={`${FilmStyle.main} justify-content-center align-items-center gap-5`}>
         <Col className={`${FilmStyle["selectedFilm-image"]}`}>
-                <img src={selectedFilm.image} alt={selectedFilm.title} />
+                <img src={selectedFilm.smallImage} alt={selectedFilm.title} />
             </Col>
             <Col className={`${FilmStyle["selectedFilm-text"]} h-100 text-white`}>
 
