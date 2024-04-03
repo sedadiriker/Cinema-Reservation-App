@@ -29,13 +29,8 @@ console.log(selectedSeats)
   return (
     <div className={TicketStyle.ticket}>
       <div className={`${TicketStyle.header} position-relative`}>
-        <Header />
-        <p
-          onClick={handlePage}
-          className={`btn bg-warning ${TicketStyle.home}`}
-        >
-          Home
-        </p>
+        <Header handlepage={handlePage} />
+        
       </div>
 
       <Row xs={1} className={TicketStyle.main}>

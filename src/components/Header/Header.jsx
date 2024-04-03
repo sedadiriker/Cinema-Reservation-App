@@ -7,7 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
-const Header = () => {
+const Header = ({handlepage}) => {
   const navbarId = "offcanvasNavbar";
   const navbarLabelId = "offcanvasNavbarLabel";
 
@@ -46,6 +46,7 @@ const Header = () => {
                 <Nav.Link
                   href="#action1"
                   className="btn text-white px-4"
+                  onClick={handlepage}
                 >
                   Home
                 </Nav.Link>

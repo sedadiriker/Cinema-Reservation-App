@@ -6,9 +6,10 @@ import HomeStyle from "./Home.module.css";
 const Home = ({ handlePage }) => {
   return (
     <div className={HomeStyle.home}>
-      <Header />
+      <Header handlePage= {handlePage} />
       <h2 className={`px-5 fs-3 text-warning `}>Movies in theaters</h2>
       <Fılms handlePage={handlePage} films={moviesSchedule} />
+      
     </div>
   );
 };

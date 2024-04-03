@@ -22,8 +22,7 @@ const Film = ({handlePage,selectedFilm,handleTicketPage}) => {
     
     <div className={FilmStyle.film}>
         <div className={`${FilmStyle.header} position-relative`}>
-        <Header/>
-        <p onClick={handlePage} className={`btn bg-warning ${FilmStyle.home}`}>Home</p>
+        <Header handlepage={handlePage}/>
         </div>
         <Row xs={1} md={2} className={`${FilmStyle.main} justify-content-center align-items-center gap-5`}>
         <Col className={`${FilmStyle["selectedFilm-image"]}`}>
