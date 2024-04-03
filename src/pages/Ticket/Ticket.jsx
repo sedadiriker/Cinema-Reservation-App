@@ -8,12 +8,12 @@ const Ticket = ({ handlePage, selectedTime, selectFilm, selectedDay }) => {
   // console.log(selectedTime);
   // console.log(selectedDay);
   const [selectedSeats, setSelectedSeats] = useState([]);
-
+console.log(selectedSeats)
   const isSeatSelected = (seatId) => {
     return selectedSeats.includes(seatId)
   };
 
-  // koltukseç yada ipta et
+  // koltukseç yada iptal et
   const handleSeatClick = (seat) => {
     if (seat.isAvailable) {
       if (isSeatSelected(seat.id)) {
