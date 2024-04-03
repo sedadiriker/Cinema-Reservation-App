@@ -21,7 +21,7 @@ const Header = () => {
             </div>
             <p className={`${HeaderStyle.logo} fs-4 fw-bold`}>CineDeniz</p>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={navbarId} />
+          <Navbar.Toggle aria-controls={navbarId} className="bg-warning" />
           <Navbar.Offcanvas
             id={navbarId}
             aria-labelledby={navbarLabelId}
@@ -32,8 +32,8 @@ const Header = () => {
               closeButton
               className="bg-danger"
             ></Offcanvas.Header>
-            <Offcanvas.Body className="ps-5">
-            <Form className="d-flex w-75">
+            <Offcanvas.Body className="ps-5 gap-5">
+            <Form className="d-flex w-75 mb-1">
                 <Form.Control
                   type="search"
                   placeholder="Search"
@@ -45,13 +45,13 @@ const Header = () => {
               <Nav className="justify-content-end flex-grow-1 pe-3 gap-5">
                 <Nav.Link
                   href="#action1"
-                  className="btn text-white border border-warning px-4"
+                  className="btn text-white px-4"
                 >
                   Home
                 </Nav.Link>
                 <Nav.Link
                   href="#action1"
-                  className="btn text-white border border-warning px-3"
+                  className="btn text-white px-3"
                 >
                   Campaigns
                 </Nav.Link>
@@ -59,10 +59,10 @@ const Header = () => {
                   title={
                     <span className={HeaderStyle.dropdownLink}>About Us</span>
                   }
-                  className="border border-warning rounded-2 px-2"
+                  className="rounded-2 px-2 text-white text-center"
                   id="offcanvasNavbarDropdown"
                 >
-                  <NavDropdown.Item href="#action3">
+                  <NavDropdown.Item href="#action3" >
                     Who we are
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action4">Contact</NavDropdown.Item>

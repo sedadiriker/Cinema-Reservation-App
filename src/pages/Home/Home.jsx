@@ -7,7 +7,7 @@ const Home = ({ handlePage }) => {
   return (
     <div className={HomeStyle.home}>
       <Header />
-      <h2 className={`text-white px-5`}>Movies in theaters</h2>
+      <h2 className={`px-5 fs-3 text-warning `}>Movies in theaters</h2>
       <Fılms handlePage={handlePage} films={moviesSchedule} />
     </div>
   );
