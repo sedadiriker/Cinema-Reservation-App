@@ -4,13 +4,11 @@ import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 
 const Session = ({ selectedFilm,handleTicketPage }) => {
-  const [selectedDateText, setSelectedDateText] = useState(""); // Yeni state
-
+  const [selectedDateText, setSelectedDateText] = useState("")
   const [selectedDay, setSelectedDay] = useState(
     new Date().toLocaleString("en-US", { weekday: "long" })
   )
   //   console.log(new Date().toLocaleString('en-US', { weekday: 'long' }))
-
   const handleChange = (e) => {
     const selectedOptionText = e.target.options[e.target.selectedIndex].text; // Kullanıcıya gösterilen tarih metnini al
     setSelectedDay(e.target.value)

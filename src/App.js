@@ -17,6 +17,7 @@ function App() {
       setSelectFilm(null)
     }
   }
+  
   const handleTicketPage = (time,selectedDateText) => {
     setSelectedTime(time)
     setCurrentPage('ticket')

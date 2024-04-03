@@ -15,7 +15,7 @@ const Header = ({handlepage}) => {
     <header className={`${HeaderStyle.header}`}>
       <Navbar expand="lg" className=" mb-3 w-100 flex-nowrap  h-100">
         <Container fluid>
-          <Navbar.Brand href="#" className="d-flex align-items-center w-25">
+          <Navbar.Brand href="#" onClick={handlepage} className="d-flex align-items-center w-25">
             <div className={HeaderStyle.image}>
               <img className="w-100" src="./images/logo.png" alt="" />
             </div>

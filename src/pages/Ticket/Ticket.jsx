@@ -6,9 +6,9 @@ import { useState } from "react";
 
 const Ticket = ({ handlePage, selectedTime, selectFilm, selectedDay }) => {
   // console.log(selectedTime);
-  // console.log(selectedDay);
+  console.log(selectedDay);
   const [selectedSeats, setSelectedSeats] = useState([]);
-console.log(selectedSeats)
+// console.log(selectedSeats)
   const isSeatSelected = (seatId) => {
     return selectedSeats.includes(seatId)
   };
@@ -30,7 +30,6 @@ console.log(selectedSeats)
     <div className={TicketStyle.ticket}>
       <div className={`${TicketStyle.header} position-relative`}>
         <Header handlepage={handlePage} />
-        
       </div>
 
       <Row xs={1} className={TicketStyle.main}>
@@ -38,7 +37,7 @@ console.log(selectedSeats)
           <h3 className="my-2">Koltuk Seçiniz</h3>
           <hr />
           <div
-            className={`${TicketStyle.information} d-flex justify-content-between align-items-center px-4 py-1`}
+            className={`${TicketStyle.information} d-flex justify-content-between align-items-center px-1 py-1`}
           >
             <p>
               {selectedDay} <span className="text-warning">Salon-2</span>
@@ -54,7 +53,7 @@ console.log(selectedSeats)
 
       <div className="cinemaSeats text-white text-center d-flex flex-column align-items-center gap-1">
         {cinemaSeats.map((seatGroup, index) => (
-          <div className="d-flex justify-content-center gap-4" key={index}>
+          <div className=" d-flex justify-content-center gap-1" key={index}>
             {seatGroup.map((seat) => (
               <span
                 onClick={() => handleSeatClick(seat)}
@@ -79,7 +78,7 @@ console.log(selectedSeats)
 
 
       <div
-        className={`${TicketStyle["seat-information"]} text-white d-flex gap-5`}
+        className={`${TicketStyle["seat-information"]} text-white d-flex gap-4 justify-content-center`}
       >
         <div className="chosen">
           <span className="bg-warning px-3 py-2 rounded-2 mx-2"></span>

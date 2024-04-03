@@ -5,7 +5,6 @@ import Session from "../../components/Session/Session";
 
 const Film = ({ handlePage, selectedFilm, handleTicketPage }) => {
   // console.log(selectedFilm.title)
-
   //* Ticket tıklandığında sessiona ilerleme
   const handleTicketClick = () => {
     const sessionElement = document.getElementById("session");
