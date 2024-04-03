@@ -32,7 +32,7 @@ const Header = ({handlepage}) => {
               closeButton
               className="bg-danger"
             ></Offcanvas.Header>
-            <Offcanvas.Body className="ps-5 gap-5">
+            <Offcanvas.Body className="ps-5 pe-3 gap-5">
             <Form className="d-flex w-75 mb-1">
                 <Form.Control
                   type="search"
